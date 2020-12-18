@@ -16,4 +16,6 @@ app.listen(port, () => console.log("server started at " + port));
 app.use("/api/users", require("./routes/users"));
 
 app.use("/api/auth/", require("./routes/auth"));
+
+app.use('/api/contacts', require('./routes/contacts'));
 app.get("/", (req, res) => res.json({ msg: "in end point" }));
